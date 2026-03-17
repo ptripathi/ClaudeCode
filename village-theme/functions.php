@@ -16,6 +16,7 @@ function village_setup() {
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'starter-content' );
     add_theme_support( 'html5', [ 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ] );
 
     add_theme_support( 'custom-logo', [
@@ -172,6 +173,148 @@ function village_lazy_attr( $attr ) {
     return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'village_lazy_attr' );
+
+/* ------------------------------------------------------------------
+   Village Data — Auto-populate on theme activation
+   Sets all customizer mods and registers starter content so that
+   when the theme is first activated the site is ready to go.
+------------------------------------------------------------------ */
+function village_set_defaults() {
+    $defaults = [
+        'village_name'       => 'Unchdih',
+        'village_tagline'    => 'एक गाँव, अनेक कहानियाँ — A Village of Heritage & Community',
+        'village_population' => '3,500',
+        'village_area'       => '8.4',
+        'village_district'   => 'Prayagraj',
+        'village_state'      => 'Uttar Pradesh',
+        'panchayat_phone'    => '0532-XXXXXXX',
+        'panchayat_email'    => 'panchayat.unchdih@up.gov.in',
+        'panchayat_address'  => 'Gram Panchayat Bhavan, Unchdih, Ramnagar, Prayagraj, Uttar Pradesh',
+        'hero_btn_primary'   => 'Explore Village',
+        'hero_btn_secondary' => 'Latest News',
+        'hero_btn_primary_url'   => '#about',
+        'hero_btn_secondary_url' => '#news',
+    ];
+
+    foreach ( $defaults as $key => $value ) {
+        if ( ! get_theme_mod( $key ) ) {
+            set_theme_mod( $key, $value );
+        }
+    }
+}
+add_action( 'after_switch_theme', 'village_set_defaults' );
+
+function village_starter_content( $content ) {
+    $about_content = '
+<p>Unchdih is a village located near Ramnagar in Prayagraj district, Uttar Pradesh. Nestled in the fertile plains of the Ganga–Yamuna Doab, the village has a rich agricultural heritage and a close-knit community that has preserved its traditions across generations.</p>
+
+<p>The village falls under Ramnagar block and is well connected to the historic city of Prayagraj — one of India\'s oldest cities, home to the sacred Triveni Sangam where the Ganga, Yamuna, and the mythical Saraswati rivers meet. Unchdih sits approximately 15–20 km from the city centre, making it accessible while retaining its rural character.</p>
+
+<h2>Agriculture</h2>
+<p>The primary occupation of Unchdih\'s residents is farming. The fertile alluvial soil of the Doab supports cultivation of wheat, rice, pulses, mustard, and seasonal vegetables. Many families also rear cattle and engage in dairy farming, which forms a significant part of the local economy.</p>
+
+<h2>Education</h2>
+<p>The village has a Primary Vidyalaya and children attend secondary schools in nearby Ramnagar. Community members have historically placed high value on education, and an increasing number of young people from Unchdih are pursuing higher education and professional careers in Prayagraj and beyond.</p>
+
+<h2>Infrastructure</h2>
+<p>Unchdih is connected by pucca roads to Ramnagar and to the main Prayagraj road network. The village has electricity supply, hand-pump and piped water access, and a Panchayat Bhavan that serves as the centre for local governance and community gatherings.</p>
+';
+
+    $culture_content = '
+<p>Unchdih, like most villages in Prayagraj district, celebrates a rich calendar of festivals that reflect the culture and traditions of Uttar Pradesh.</p>
+
+<h2>Ram Leela</h2>
+<p>Being close to Ramnagar, the village is deeply connected to the Ramnagar Ram Leela — one of the most celebrated month-long performances of the Ramayana in India, held every year during the Navratri and Dussehra season. Many villagers participate in and attend the Ram Leela as a cherished annual tradition.</p>
+
+<h2>Kumbh Mela Connection</h2>
+<p>Prayagraj hosts the Kumbh Mela — the world\'s largest religious gathering — every 12 years and the Ardh Kumbh every 6 years. Residents of Unchdih have a long tradition of taking part in the holy dip at Triveni Sangam during these sacred occasions.</p>
+
+<h2>Holi</h2>
+<p>Holi is celebrated with great enthusiasm. The village comes alive with colours, folk music, and community feasting. Traditional gujiya sweets are made in every home and shared with neighbours.</p>
+
+<h2>Diwali & Chhath Puja</h2>
+<p>Diwali is marked by lighting of diyas, firecrackers, and the worship of Lakshmi. Chhath Puja — a festival dedicated to the Sun God — is observed with deep reverence at the nearest water body, with women observing a strict fast over four days.</p>
+
+<h2>Makar Sankranti</h2>
+<p>Celebrated in January as the harvest festival, Makar Sankranti is observed with kite flying, distribution of til-gur (sesame and jaggery), and a holy dip in the Ganga.</p>
+';
+
+    $news_content = '
+<p>This page lists the latest news, official notices, and announcements from Gram Panchayat Unchdih.</p>
+<p>Check back regularly for updates on government schemes, local events, infrastructure works, and community decisions.</p>
+';
+
+    $gallery_content = '
+<p>A collection of photographs capturing the beauty, culture, and everyday life of Unchdih. Upload images directly from the WordPress editor to add to this gallery.</p>
+';
+
+    $contact_content = '
+<h2>Gram Panchayat Unchdih</h2>
+<p><strong>Address:</strong><br>Gram Panchayat Bhavan, Unchdih,<br>Ramnagar, Prayagraj,<br>Uttar Pradesh</p>
+
+<p><strong>Block:</strong> Ramnagar<br>
+<strong>District:</strong> Prayagraj<br>
+<strong>State:</strong> Uttar Pradesh</p>
+
+<p>To reach us, visit the Panchayat Bhavan during office hours, or use the contact form below. For urgent matters contact the Gram Pradhan directly.</p>
+';
+
+    $content['posts']['home'] = [
+        'post_type'    => 'page',
+        'post_title'   => 'Home',
+        'post_name'    => 'home',
+        'post_content' => '',
+    ];
+
+    $pages = [
+        'about'   => [ 'About Unchdih',       $about_content   ],
+        'culture' => [ 'Culture & Festivals',  $culture_content ],
+        'news'    => [ 'News & Notices',        $news_content    ],
+        'gallery' => [ 'Photo Gallery',         $gallery_content ],
+        'contact' => [ 'Contact Panchayat',     $contact_content ],
+    ];
+
+    foreach ( $pages as $slug => [ $title, $body ] ) {
+        $content['posts'][ $slug ] = [
+            'post_type'    => 'page',
+            'post_title'   => $title,
+            'post_name'    => $slug,
+            'post_content' => $body,
+        ];
+    }
+
+    $content['options'] = [
+        'show_on_front'  => 'page',
+        'page_on_front'  => '{{home}}',
+        'blogname'       => 'Unchdih Village',
+        'blogdescription'=> 'Ramnagar, Prayagraj, Uttar Pradesh',
+    ];
+
+    $content['nav_menus']['primary'] = [
+        'name'  => 'Primary Navigation',
+        'items' => [
+            [ 'object' => 'page', 'object_id' => '{{home}}' ],
+            [ 'object' => 'page', 'object_id' => '{{about}}' ],
+            [ 'object' => 'page', 'object_id' => '{{news}}' ],
+            [ 'object' => 'page', 'object_id' => '{{gallery}}' ],
+            [ 'object' => 'page', 'object_id' => '{{culture}}' ],
+            [ 'object' => 'page', 'object_id' => '{{contact}}' ],
+        ],
+    ];
+
+    $content['theme_mods'] = [
+        'village_name'       => 'Unchdih',
+        'village_tagline'    => 'एक गाँव, अनेक कहानियाँ — A Village of Heritage & Community',
+        'village_population' => '3,500',
+        'village_area'       => '8.4',
+        'village_district'   => 'Prayagraj',
+        'village_state'      => 'Uttar Pradesh',
+        'panchayat_address'  => 'Gram Panchayat Bhavan, Unchdih, Ramnagar, Prayagraj, Uttar Pradesh',
+    ];
+
+    return $content;
+}
+add_filter( 'get_theme_starter_content', 'village_starter_content' );
 
 function village_pagination() {
     echo paginate_links( [

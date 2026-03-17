@@ -1,6 +1,39 @@
-=== Village Connect ===
-A modern WordPress theme for Indian village websites.
+=== Village Connect — Unchdih ===
+WordPress theme for Unchdih village website.
+Village: Unchdih Bazar, Ramnagar, Prayagraj, Uttar Pradesh
 Version: 1.0.0
+
+
+------------------------------------------------------------
+PRE-POPULATED CONTENT (auto-loads on theme activation)
+------------------------------------------------------------
+
+This theme comes with content pre-filled for Unchdih. When you
+activate the theme in the WordPress Customizer (Appearance >
+Customize), click "Publish" and WordPress will automatically create:
+
+  Pages created:
+    - Home          (static front page)
+    - About Unchdih (village history, agriculture, education)
+    - Culture & Festivals (Ram Leela, Kumbh, Holi, Chhath, Diwali)
+    - News & Notices
+    - Photo Gallery
+    - Contact Panchayat
+
+  Settings pre-filled:
+    - Village Name:   Unchdih
+    - District:       Prayagraj
+    - State:          Uttar Pradesh
+    - Tagline:        एक गाँव, अनेक कहानियाँ
+    - Primary menu with all 6 pages linked
+
+  Things you still need to fill in manually (Appearance > Customize
+  > Village Information):
+    - Exact population figure
+    - Panchayat phone number
+    - Panchayat email address
+    - Facebook / YouTube / WhatsApp links (if any)
+    - Hero banner photo (a landscape photo of the village)
 
 
 ------------------------------------------------------------
