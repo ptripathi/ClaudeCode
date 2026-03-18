@@ -1,0 +1,197 @@
+# Hindi translation for Village Connect WordPress theme
+# Copyright (C) 2024 Village Connect
+# License: GNU General Public License v2 or later
+#
+# To compile this file to a .mo binary (required by WordPress):
+#   Option A (easiest): Install the free "Loco Translate" plugin in WordPress.
+#                       It reads this .po file and lets you edit translations
+#                       directly in WP Admin > Loco Translate > Themes.
+#   Option B: Download Poedit (poedit.net), open this file, edit, and Save.
+#             Poedit auto-generates the .mo file alongside this .po file.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Village Connect 1.0.0\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# --- Navigation & General ---
+msgid "Primary"
+msgstr "मुख्य"
+
+msgid "Toggle menu"
+msgstr "मेनू खोलें/बंद करें"
+
+msgid "Posts navigation"
+msgstr "पोस्ट नेविगेशन"
+
+msgid "Post navigation"
+msgstr "पोस्ट नेविगेशन"
+
+msgid "Sidebar"
+msgstr "साइडबार"
+
+msgid "Page"
+msgstr "पृष्ठ"
+
+# --- Homepage Sections ---
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+msgid "Our Village"
+msgstr "हमारा गाँव"
+
+msgid "Read More"
+msgstr "और पढ़ें"
+
+msgid "Updates"
+msgstr "अपडेट"
+
+msgid "Latest News & Notices"
+msgstr "ताजा समाचार और सूचनाएं"
+
+msgid "View All News"
+msgstr "सभी समाचार देखें"
+
+msgid "Memories"
+msgstr "यादें"
+
+msgid "Photo Gallery"
+msgstr "फोटो गैलरी"
+
+msgid "View Full Gallery"
+msgstr "पूरी गैलरी देखें"
+
+msgid "Heritage"
+msgstr "विरासत"
+
+msgid "Culture & Festivals"
+msgstr "संस्कृति और त्योहार"
+
+msgid "Learn More"
+msgstr "और जानें"
+
+msgid "Reach Us"
+msgstr "हमसे संपर्क करें"
+
+msgid "Gram Panchayat"
+msgstr "ग्राम पंचायत"
+
+msgid "Message on WhatsApp"
+msgstr "व्हाट्सएप पर संदेश करें"
+
+# --- Stats Bar ---
+msgid "Population"
+msgstr "जनसंख्या"
+
+msgid "Total Area"
+msgstr "कुल क्षेत्रफल"
+
+msgid "District"
+msgstr "जिला"
+
+# --- Footer ---
+msgid "Quick Links"
+msgstr "त्वरित लिंक"
+
+msgid "Contact"
+msgstr "संपर्क"
+
+msgid "Address"
+msgstr "पता"
+
+msgid "Phone"
+msgstr "फोन"
+
+msgid "Email"
+msgstr "ईमेल"
+
+msgid "All rights reserved."
+msgstr "सर्वाधिकार सुरक्षित।"
+
+# --- Blog / News ---
+msgid "No posts found."
+msgstr "कोई पोस्ट नहीं मिली।"
+
+msgid "Older"
+msgstr "पुराने"
+
+msgid "Newer"
+msgstr "नए"
+
+msgid "Previous"
+msgstr "पिछला"
+
+msgid "Next"
+msgstr "अगला"
+
+# --- Footer Widget Areas ---
+msgid "Footer — Village Info"
+msgstr "फुटर — गाँव की जानकारी"
+
+msgid "Footer — Quick Links"
+msgstr "फुटर — त्वरित लिंक"
+
+msgid "Footer — Contact"
+msgstr "फुटर — संपर्क"
+
+msgid "Page Sidebar"
+msgstr "पेज साइडबार"
+
+# --- Customizer ---
+msgid "Village Information"
+msgstr "गाँव की जानकारी"
+
+msgid "Hero / Banner"
+msgstr "मुख्य बैनर"
+
+msgid "Village Name"
+msgstr "गाँव का नाम"
+
+msgid "Hero Tagline"
+msgstr "मुख्य टैगलाइन"
+
+msgid "Population"
+msgstr "जनसंख्या"
+
+msgid "Area (sq km)"
+msgstr "क्षेत्रफल (वर्ग किमी)"
+
+msgid "State"
+msgstr "राज्य"
+
+msgid "Panchayat Phone"
+msgstr "पंचायत फोन"
+
+msgid "Panchayat Email"
+msgstr "पंचायत ईमेल"
+
+msgid "Panchayat Address"
+msgstr "पंचायत पता"
+
+msgid "Facebook URL"
+msgstr "फेसबुक लिंक"
+
+msgid "YouTube Channel URL"
+msgstr "यूट्यूब चैनल लिंक"
+
+msgid "WhatsApp Number"
+msgstr "व्हाट्सएप नंबर"
+
+msgid "Primary Button Text"
+msgstr "मुख्य बटन का नाम"
+
+msgid "Secondary Button Text"
+msgstr "दूसरे बटन का नाम"
+
+msgid "Primary Button Link"
+msgstr "मुख्य बटन लिंक"
+
+msgid "Secondary Button Link"
+msgstr "दूसरे बटन का लिंक"

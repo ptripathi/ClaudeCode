@@ -49,6 +49,10 @@
       <span class="bar"></span>
     </button>
 
+    <div class="header-lang">
+      <?php village_language_switcher(); ?>
+    </div>
+
   </div>
 </header>
 <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>

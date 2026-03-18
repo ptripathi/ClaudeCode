@@ -266,8 +266,38 @@ function village_starter_content( $content ) {
         'post_content' => '',
     ];
 
+    $ganga_content = '
+<p>उंचडीह गाँव प्रयागराज जिले में स्थित है, जहाँ से पवित्र गंगा नदी बहती है। यहाँ के लोगों के लिए गंगा केवल एक नदी नहीं — वह जीवन का स्रोत, एक जीवित देवी और इस समुदाय की आत्मा है।</p>
+<p><em>Unchdih lies in Prayagraj district, through which the sacred River Ganges flows. For the people here, the Ganga is not merely a river — she is a living goddess, the source of life, and the spiritual heart of the community.</em></p>
+
+<h2>प्रयागराज — त्रिवेणी संगम / The Triveni Sangam</h2>
+<p>उंचडीह, प्रयागराज के निकट है — जहाँ गंगा, यमुना और पौराणिक सरस्वती नदियों का पवित्र त्रिवेणी संगम है। यह स्थान प्रतिवर्ष लाखों तीर्थयात्रियों को आकर्षित करता है और प्रत्येक 12 वर्ष में महाकुंभ मेले का आयोजन यहीं होता है — जो विश्व का सबसे बड़ा मानव समागम है।</p>
+<p><em>Unchdih is within reach of Prayagraj, home to the Triveni Sangam — the confluence of the Ganga, Yamuna, and the mythical Saraswati. This site attracts millions of pilgrims each year and hosts the Kumbh Mela every 12 years, the world\'s largest human gathering.</em></p>
+
+<h2>गंगा और कृषि / Ganga and Agriculture</h2>
+<p>गंगा की बाढ़ के मैदानों की उपजाऊ जलोढ़ मिट्टी सहस्राब्दियों से उंचडीह जैसे गाँवों की कृषि का आधार रही है। गेहूं, चावल, दलहन और सब्जियाँ यहाँ प्रचुरता से उगाई जाती हैं। किसान नदी के मौसमी चक्र पर निर्भर हैं और नहरों व कुओं से सिंचाई करते हैं।</p>
+<p><em>The Ganga\'s fertile alluvial flood plains have sustained farming in villages like Unchdih for millennia. Wheat, rice, pulses, and vegetables thrive here. Farmers depend on the river\'s seasonal rhythms and irrigate through canals and wells fed by the Ganga.</em></p>
+
+<h2>छठ पूजा / Chhath Puja</h2>
+<p>गाँव का सबसे भव्य पर्व है छठ पूजा। भक्तगण — विशेषकर महिलाएं — 36 घंटे का कठोर व्रत रखती हैं और गंगा के घाट पर उगते व अस्त होते सूर्य को अर्घ्य देती हैं। घाट का किनारा दीपों की रोशनी और श्रद्धा के सागर में डूब जाता है।</p>
+<p><em>Chhath Puja is the village\'s grandest festival. Devotees — mostly women — observe a 36-hour fast and offer prayers to the rising and setting sun at the Ganga\'s ghat. The riverbank transforms into a sea of lamps and devotion.</em></p>
+
+<h2>मकर संक्रांति — पवित्र स्नान / Makar Sankranti</h2>
+<p>14 जनवरी को मकर संक्रांति पर गाँव के लोग प्रयागराज में संगम पर पवित्र डुबकी लगाने जाते हैं। मान्यता है कि इस दिन त्रिवेणी संगम में स्नान करने से पापों का नाश होता है और पुण्य की प्राप्ति होती है।</p>
+<p><em>On Makar Sankranti (January 14th), villagers join thousands travelling to the Sangam for a holy dip. It is believed that bathing at Triveni on this day washes away sins and brings divine blessings.</em></p>
+
+<h2>गंगा दशहरा / Ganga Dussehra</h2>
+<p>गंगा दशहरा पर गंगा के स्वर्ग से पृथ्वी पर अवतरण का उत्सव मनाया जाता है। नदी को फूल, दीपक और प्रार्थनाओं से पूजा जाता है।</p>
+<p><em>Ganga Dussehra celebrates the descent of the Ganga from the heavens to earth. The river is worshipped with flowers, lamps, and prayers.</em></p>
+
+<h2>नमामि गंगे / Namami Gange</h2>
+<p>उंचडीह का समुदाय गंगा की स्वच्छता और पुनर्जीवन के लिए सरकार के नमामि गंगे अभियान का समर्थन करता है। गंगा को स्वच्छ रखना हमारी सामूहिक जिम्मेदारी है।</p>
+<p><em>The community of Unchdih supports the Namami Gange programme — the government\'s initiative to clean and rejuvenate the sacred river. Keeping the Ganga pure is our collective responsibility.</em></p>
+';
+
     $pages = [
         'about'   => [ 'About Unchdih',       $about_content   ],
+        'ganga'   => [ 'पवित्र गंगा — The Sacred Ganga', $ganga_content ],
         'culture' => [ 'Culture & Festivals',  $culture_content ],
         'news'    => [ 'News & Notices',        $news_content    ],
         'gallery' => [ 'Photo Gallery',         $gallery_content ],
@@ -295,6 +325,7 @@ function village_starter_content( $content ) {
         'items' => [
             [ 'object' => 'page', 'object_id' => '{{home}}' ],
             [ 'object' => 'page', 'object_id' => '{{about}}' ],
+            [ 'object' => 'page', 'object_id' => '{{ganga}}' ],
             [ 'object' => 'page', 'object_id' => '{{news}}' ],
             [ 'object' => 'page', 'object_id' => '{{gallery}}' ],
             [ 'object' => 'page', 'object_id' => '{{culture}}' ],
@@ -324,3 +355,48 @@ function village_pagination() {
         'before_page_number' => '<span class="sr-only">' . __( 'Page', 'village-connect' ) . ' </span>',
     ] );
 }
+
+/* ------------------------------------------------------------------
+   Multilingual — Polylang integration
+   Install the free "Polylang" plugin to enable Hindi ↔ English.
+   The language switcher in the header uses pll_the_languages()
+   when Polylang is active, and falls back to a URL-param switcher.
+------------------------------------------------------------------ */
+function village_language_switcher() {
+    if ( function_exists( 'pll_the_languages' ) ) {
+        echo '<ul class="lang-switcher">';
+        pll_the_languages( [
+            'show_flags'    => 0,
+            'show_names'    => 1,
+            'display_names_as' => 'name',
+            'hide_current'  => 0,
+            'echo'          => 1,
+        ] );
+        echo '</ul>';
+        return;
+    }
+
+    // Fallback: simple hi / en toggle via ?lang= query param
+    $current = isset( $_GET['lang'] ) ? sanitize_key( $_GET['lang'] ) : 'hi';
+    $base    = strtok( ( isset( $_SERVER['HTTPS'] ) ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], '?' );
+    echo '<div class="lang-switcher lang-switcher--simple">';
+    echo '<a href="' . esc_url( $base . '?lang=hi' ) . '" class="lang-btn' . ( $current === 'hi' ? ' active' : '' ) . '" hreflang="hi">हिं</a>';
+    echo '<span class="lang-sep">|</span>';
+    echo '<a href="' . esc_url( $base . '?lang=en' ) . '" class="lang-btn' . ( $current === 'en' ? ' active' : '' ) . '" hreflang="en">EN</a>';
+    echo '</div>';
+}
+
+// Register dynamic customizer strings with Polylang so they can be translated
+function village_pll_register_strings() {
+    if ( ! function_exists( 'pll_register_string' ) ) return;
+    $keys = [
+        'village_name', 'village_tagline', 'village_district', 'village_state',
+        'panchayat_address', 'panchayat_phone', 'panchayat_email',
+        'hero_btn_primary', 'hero_btn_secondary',
+    ];
+    foreach ( $keys as $key ) {
+        $val = get_theme_mod( $key, '' );
+        if ( $val ) pll_register_string( $key, $val, 'Village Connect Theme' );
+    }
+}
+add_action( 'init', 'village_pll_register_strings' );

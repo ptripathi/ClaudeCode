@@ -954,8 +954,101 @@ h1, h2, h3, h4, h5, h6 {
 .stats-grid .reveal:nth-child(2) { transition-delay: 0.12s; }
 .stats-grid .reveal:nth-child(3) { transition-delay: 0.24s; }
 
-/* Users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
+/* 22. LANGUAGE SWITCHER
+   ============================================================ */
+.header-lang {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Polylang-generated list */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 999px;
+  overflow: hidden;
+  transition: border-color var(--dur) var(--ease);
+}
+
+.scrolled .lang-switcher {
+  border-color: var(--c-border);
+}
+
+/* Polylang wraps each item in <li> */
+.lang-switcher li a,
+.lang-switcher .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  transition: all var(--dur) var(--ease);
+  white-space: nowrap;
+}
+
+.scrolled .lang-switcher li a,
+.scrolled .lang-switcher .lang-btn {
+  color: var(--c-muted);
+}
+
+.lang-switcher li a:hover,
+.lang-switcher .lang-btn:hover {
+  color: var(--c-white);
+  background: rgba(255,255,255,.15);
+}
+
+.scrolled .lang-switcher li a:hover,
+.scrolled .lang-switcher .lang-btn:hover {
+  color: var(--c-green);
+  background: var(--c-green-light);
+}
+
+/* Active / current language */
+.lang-switcher li.current-lang a,
+.lang-switcher .lang-btn.active {
+  background: rgba(255,255,255,.2);
+  color: var(--c-white);
+  font-weight: 700;
+}
+
+.scrolled .lang-switcher li.current-lang a,
+.scrolled .lang-switcher .lang-btn.active {
+  background: var(--c-green);
+  color: var(--c-white);
+}
+
+/* Divider between items */
+.lang-sep {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,.35);
+  pointer-events: none;
+}
+
+.scrolled .lang-sep { color: var(--c-border); }
+
+/* Simple fallback switcher */
+.lang-switcher--simple {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .header-lang { margin-left: 0.25rem; }
+  .lang-switcher li a,
+  .lang-switcher .lang-btn { padding: 0.2rem 0.5rem; font-size: 0.7rem; }
+}
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero-bg { transform: none; transition: none; }
 }
