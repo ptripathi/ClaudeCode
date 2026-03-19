@@ -35,7 +35,8 @@
 $pop  = get_theme_mod('village_population','');
 $area = get_theme_mod('village_area','');
 $dist = get_theme_mod('village_district','');
-if ( $pop || $area || $dist ) : ?>
+$km   = get_theme_mod('village_distance','');
+if ( $pop || $area || $dist || $km ) : ?>
 <section class="stats-bar reveal-section" id="stats">
   <div class="container stats-grid">
     <?php if ($pop) : ?>
@@ -55,6 +56,12 @@ if ( $pop || $area || $dist ) : ?>
       <div class="stat-item reveal">
         <span class="stat-text"><?php echo esc_html($dist); ?></span>
         <span class="stat-label"><?php _e('District','village-connect'); ?></span>
+      </div>
+    <?php endif; ?>
+    <?php if ($km) : ?>
+      <div class="stat-item reveal">
+        <span class="stat-text"><?php echo esc_html($km); ?></span>
+        <span class="stat-label"><?php _e('From Prayagraj Railway Station','village-connect'); ?></span>
       </div>
     <?php endif; ?>
   </div>

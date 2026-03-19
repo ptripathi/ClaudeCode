@@ -96,6 +96,9 @@ msgstr "कुल क्षेत्रफल"
 msgid "District"
 msgstr "जिला"
 
+msgid "From Prayagraj Railway Station"
+msgstr "प्रयागराज रेलवे स्टेशन से"
+
 # --- Footer ---
 msgid "Quick Links"
 msgstr "त्वरित लिंक"

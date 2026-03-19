@@ -114,6 +114,7 @@ function village_customizer( $wp_customize ) {
         'village_population' => [ 'Population',            '' ],
         'village_area'       => [ 'Area (sq km)',          '' ],
         'village_district'   => [ 'District',              '' ],
+        'village_distance'   => [ 'Distance from Prayagraj Railway Station', '' ],
         'village_state'      => [ 'State',                 '' ],
         'panchayat_phone'    => [ 'Panchayat Phone',       '' ],
         'panchayat_email'    => [ 'Panchayat Email',       '' ],
@@ -187,6 +188,7 @@ function village_set_defaults() {
         'village_area'       => '8.4',
         'village_district'   => 'Prayagraj',
         'village_state'      => 'Uttar Pradesh',
+        'village_distance'   => '40 km',
         'panchayat_phone'    => '0532-XXXXXXX',
         'panchayat_email'    => 'panchayat.unchdih@up.gov.in',
         'panchayat_address'  => 'Gram Panchayat Bhavan, Unchdih, Ramnagar, Prayagraj, Uttar Pradesh',
@@ -340,6 +342,7 @@ function village_starter_content( $content ) {
         'village_area'       => '8.4',
         'village_district'   => 'Prayagraj',
         'village_state'      => 'Uttar Pradesh',
+        'village_distance'   => '40 km',
         'panchayat_address'  => 'Gram Panchayat Bhavan, Unchdih, Ramnagar, Prayagraj, Uttar Pradesh',
     ];
 
