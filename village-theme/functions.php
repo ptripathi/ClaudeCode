@@ -119,6 +119,8 @@ function village_customizer( $wp_customize ) {
         'panchayat_phone'    => [ 'Panchayat Phone',       '' ],
         'panchayat_email'    => [ 'Panchayat Email',       '' ],
         'panchayat_address'  => [ 'Panchayat Address',     '' ],
+        'vidhan_sabha'       => [ 'Vidhan Sabha Chhetra',  '' ],
+        'lok_sabha'          => [ 'Lok Sabha Chhetra',     '' ],
         'social_facebook'    => [ 'Facebook URL',          '' ],
         'social_youtube'     => [ 'YouTube Channel URL',   '' ],
         'social_whatsapp'    => [ 'WhatsApp Number',       '' ],
@@ -192,6 +194,8 @@ function village_set_defaults() {
         'panchayat_phone'    => '0532-XXXXXXX',
         'panchayat_email'    => 'panchayat.unchdih@up.gov.in',
         'panchayat_address'  => 'Gram Panchayat Bhavan, Unchdih, Ramnagar, Prayagraj, Uttar Pradesh',
+        'vidhan_sabha'       => 'Karchhana (252)',
+        'lok_sabha'          => 'Allahabad (52)',
         'hero_btn_primary'   => 'Explore Village',
         'hero_btn_secondary' => 'Latest News',
         'hero_btn_primary_url'   => '#about',
@@ -344,6 +348,8 @@ function village_starter_content( $content ) {
         'village_state'      => 'Uttar Pradesh',
         'village_distance'   => '40 km',
         'panchayat_address'  => 'Gram Panchayat Bhavan, Unchdih, Ramnagar, Prayagraj, Uttar Pradesh',
+        'vidhan_sabha'       => 'Karchhana (252)',
+        'lok_sabha'          => 'Allahabad (52)',
     ];
 
     return $content;

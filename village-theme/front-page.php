@@ -238,10 +238,14 @@ if ($culture_page) :
       $phone = get_theme_mod('panchayat_phone','');
       $email = get_theme_mod('panchayat_email','');
       $wa    = get_theme_mod('social_whatsapp','');
-      if ($addr)  echo '<p class="contact-row"><strong>' . __('Address','village-connect') . ':</strong><br>' . nl2br(esc_html($addr)) . '</p>';
-      if ($phone) echo '<p class="contact-row"><strong>' . __('Phone','village-connect') . ':</strong> <a href="tel:' . esc_attr($phone) . '">' . esc_html($phone) . '</a></p>';
-      if ($email) echo '<p class="contact-row"><strong>' . __('Email','village-connect') . ':</strong> <a href="mailto:' . esc_attr($email) . '">' . esc_html($email) . '</a></p>';
-      if ($wa)    echo '<p class="contact-row"><a href="https://wa.me/' . esc_attr(preg_replace('/\D/','',$wa)) . '" class="btn btn-whatsapp" target="_blank" rel="noopener">' . __('Message on WhatsApp','village-connect') . '</a></p>';
+      $vidhan = get_theme_mod('vidhan_sabha','');
+      $lok    = get_theme_mod('lok_sabha','');
+      if ($addr)   echo '<p class="contact-row"><strong>' . __('Address','village-connect') . ':</strong><br>' . nl2br(esc_html($addr)) . '</p>';
+      if ($phone)  echo '<p class="contact-row"><strong>' . __('Phone','village-connect') . ':</strong> <a href="tel:' . esc_attr($phone) . '">' . esc_html($phone) . '</a></p>';
+      if ($email)  echo '<p class="contact-row"><strong>' . __('Email','village-connect') . ':</strong> <a href="mailto:' . esc_attr($email) . '">' . esc_html($email) . '</a></p>';
+      if ($vidhan) echo '<p class="contact-row"><strong>' . __('Vidhan Sabha Chhetra','village-connect') . ':</strong> ' . esc_html($vidhan) . '</p>';
+      if ($lok)    echo '<p class="contact-row"><strong>' . __('Lok Sabha Chhetra','village-connect') . ':</strong> ' . esc_html($lok) . '</p>';
+      if ($wa)     echo '<p class="contact-row"><a href="https://wa.me/' . esc_attr(preg_replace('/\D/','',$wa)) . '" class="btn btn-whatsapp" target="_blank" rel="noopener">' . __('Message on WhatsApp','village-connect') . '</a></p>';
       ?>
     </div>
     <div class="contact-form reveal">

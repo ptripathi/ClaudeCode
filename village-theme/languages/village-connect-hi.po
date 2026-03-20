@@ -109,6 +109,12 @@ msgstr "संपर्क"
 msgid "Address"
 msgstr "पता"
 
+msgid "Vidhan Sabha Chhetra"
+msgstr "विधान सभा क्षेत्र"
+
+msgid "Lok Sabha Chhetra"
+msgstr "लोक सभा क्षेत्र"
+
 msgid "Phone"
 msgstr "फोन"
 
